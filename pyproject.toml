@@ -13,6 +13,9 @@ flask = "^3.0.2"
 [tool.poetry.scripts]
 app = "app:main"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
