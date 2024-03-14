@@ -1,0 +1,5 @@
+test:
+  image: nixos/nix:2.15.0
+  script:
+    - nix --experimental-features "nix-command flakes" develop -c pytest test.py
+    - nix --experimental-features "nix-command flakes" develop -c ruff check
