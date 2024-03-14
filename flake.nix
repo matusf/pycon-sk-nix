@@ -36,7 +36,9 @@
 
       devShells.default = pkgs.mkShell {
         inputsFrom = [self.packages.${system}.myapp];
-        packages = [pkgs.poetry];
+        packages = [pkgs.poetry pkgs.ruff pkgs.kubectl];
+        PYCON = "FUN";
+        GIL = "GONE";
       };
     });
 }
